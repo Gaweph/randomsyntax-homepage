@@ -1,0 +1,59 @@
+html, body, .container-table {
+    height: 100%;
+    width: 100%;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+}
+
+/* center box */
+.container {
+    background: linear-gradient(
+        to bottom, 
+        #222 0%, 
+        #222 50%, 
+        #fff 50%, 
+        #fff 100%
+    );
+    min-height:400px;
+}
+.container-table {
+    display: table;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#top, #bottom
+{
+    height: 200px;
+    position: relative;
+}
+
+#top-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#top-content, #bottom-content {
+    padding: 10px 0px;
+}
+/**************/
+
+.btn{
+    margin: 5px;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+}
