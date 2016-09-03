@@ -6,6 +6,7 @@ html, body, .container-table {
 
 /* center box */
 .container {
+    background-color: #222;
     background: linear-gradient(
         to bottom, 
         #222 0%, 
