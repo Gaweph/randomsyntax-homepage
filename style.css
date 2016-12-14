@@ -6,7 +6,6 @@ html, body, .container-table {
 
 /* center box */
 .container {
-    background-color: #222;
     background: linear-gradient(
         to bottom, 
         #222 0%, 
@@ -46,6 +45,12 @@ html, body, .container-table {
     margin: 5px;
 }
 
+p::before {
+  content: attr(data-foo) " ";
+  color: attr(data-btnbg);
+}
+
+
 .title {
     font-size: 5rem;
     font-weight: 700;
@@ -57,4 +62,9 @@ html, body, .container-table {
     color: #fff;
     font-weight: 300;
     font-style: italic;
+}
+
+
+blockquote {
+    border-left: none !important;
 }
