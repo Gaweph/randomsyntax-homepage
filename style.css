@@ -45,12 +45,6 @@ html, body, .container-table {
     margin: 5px;
 }
 
-p::before {
-  content: attr(data-foo) " ";
-  color: attr(data-btnbg);
-}
-
-
 .title {
     font-size: 5rem;
     font-weight: 700;
