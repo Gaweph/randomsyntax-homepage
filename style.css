@@ -53,9 +53,11 @@ html, body, .container-table {
 
 .subtitle {
     font-size: 2rem;
-    color: #fff;
+
     font-weight: 300;
     font-style: italic;
+    text-align: center;
+    color: #999;
 }
 
 
