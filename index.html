@@ -27,11 +27,18 @@
       }
       img {
         height: 200px;
+        max-width: 100%;
       }
-      @media (max-width: 500px) {
+      .subtitle {
+        font-size: 1.2em;
+      }
+      @media (max-width: 650px) {
         img {
-          max-width: 100%;
-          width: inherit;
+          height: 100px;
+          /* width: inherit; */
+        }
+        .subtitle {
+          font-size: 1em;
         }
       }
       #top,
@@ -119,12 +126,15 @@
   <body>
     <div id="top">
       <div class="contents">
-        <img src="logo_text.svg" />
+        <!-- <img src="logo.svg" /> -->
+        <h1 class="title"><img src="logo_name.svg" alt="Gareth Williams" /></h1>
+        <!-- <img src="logo_text.svg" /> -->
+        <!-- <div class="title"><img src="logo_text.svg" />GARETH WILLIAMS</div> -->
+        <h2 class="subtitle">RandomSyntax.Net</h2>
       </div>
     </div>
     <div id="bottom">
       <div class="contents">
-        <!-- <h1>GARETH WILLIAMS</h1> -->
         <div class="social-container">
           <a
             class="btn-github"
@@ -198,9 +208,12 @@
         </div>
 
         <blockquote>
+          "Striving for competence!"
+        </blockquote>
+        <!-- <blockquote>
           <p>"Ace. What a guy!"</p>
           <p><small>Anonymous</small></p>
-        </blockquote>
+        </blockquote> -->
       </div>
     </div>
   </body>
