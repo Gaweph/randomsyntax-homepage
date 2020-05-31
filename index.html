@@ -29,10 +29,6 @@
         height: 200px;
         max-width: 100%;
       }
-      .subtitle {
-        text-transform: uppercase;
-        font-size: 1.5em;
-      }
       #top,
       #bottom {
         position: relative;
@@ -48,30 +44,24 @@
       }
 
       #top {
-        background-color: black;
+        background-color: #222;
       }
       #bottom {
-        background-color: white;
+        background-color: #f5f5f5;
       }
       #top .contents {
         bottom: 10px;
-        color: #fff;
+        color: #f5f5f5;
       }
       #bottom .contents {
-        top: 20px;
-        color: #333;
+        top: 10px;
+        color: #222;
       }
       a,
       a:hover,
       a:focus {
         /* text-decoration: none; */
         border: none;
-      }
-
-      .social-container {
-        font-size: 1.5em;
-        letter-spacing: 0.2em;
-        margin: 10px;
       }
       .social-container a {
         color: #ccc;
@@ -97,6 +87,7 @@
         width: 1.5em;
         height: 1.5em;
       }
+
       blockquote {
         font-size: 1.2em;
         line-height: 1.5;
@@ -111,14 +102,35 @@
       blockquote small:before {
         content: "\2014 \00A0";
       }
+      .title {
+        text-transform: uppercase;
+        font-size: 4em;
+      }
+      .tagline {
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
 
+      .social-container {
+        font-size: 1.5em;
+        letter-spacing: 0.2em;
+      }
+
+      /* .title,
+      .tagline, */
+      .social-container {
+        margin: 20px;
+      }
       @media (max-width: 850px) {
         img {
           height: 100px;
           /* width: inherit; */
         }
-        .subtitle {
-          font-size: 1.2em;
+        .title {
+          font-size: 2em;
+        }
+        .tagline {
+          font-size: 1em;
         }
         blockquote {
           font-size: 1em;
@@ -134,19 +146,19 @@
   <body>
     <div id="top">
       <div class="contents">
-        <!-- <img src="logo.svg" alt="logo" /> -->
+        <img src="logo.svg" alt="logo" />
         <h1 class="title">
-          <!-- <img src="logo_text.svg" alt="Gareth Williams" /> -->
-          <img src="logo_name.svg" alt="Gareth Williams" />
+          <span style="font-weight: bolder;">Gareth</span>
+          <span style="font-weight: lighter;">Williams</span>
         </h1>
       </div>
     </div>
     <div id="bottom">
       <div class="contents">
-        <!-- <h2 class="subtitle">
-          <span style="font-weight: bolder;">Gareth</span>
-          <span style="font-weight: bolder;">Williams</span>
-        </h2> -->
+        <div class="tagline">
+          - Striving for competence -
+        </div>
+
         <div class="social-container">
           <a
             class="btn-github"
@@ -218,10 +230,6 @@
             </svg>
           </a>
         </div>
-
-        <blockquote>
-          "Striving for competence!"
-        </blockquote>
         <!-- <blockquote>
           <p>"Ace. What a guy!"</p>
           <p><small>Anonymous</small></p>
