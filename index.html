@@ -30,16 +30,8 @@
         max-width: 100%;
       }
       .subtitle {
-        font-size: 1.2em;
-      }
-      @media (max-width: 650px) {
-        img {
-          height: 100px;
-          /* width: inherit; */
-        }
-        .subtitle {
-          font-size: 1em;
-        }
+        text-transform: uppercase;
+        font-size: 1.5em;
       }
       #top,
       #bottom {
@@ -79,6 +71,7 @@
       .social-container {
         font-size: 1.5em;
         letter-spacing: 0.2em;
+        margin: 10px;
       }
       .social-container a {
         color: #ccc;
@@ -105,20 +98,35 @@
         height: 1.5em;
       }
       blockquote {
-        padding: 10px 20px;
-        margin: 0 0 20px;
         font-size: 1.2em;
         line-height: 1.5;
         /* border-left: 5px solid #eee; */
       }
       blockquote small {
         display: block;
-        font-size: 80%;
+        font-size: 0.8em;
         line-height: 1.42857143;
         color: #777;
       }
       blockquote small:before {
         content: "\2014 \00A0";
+      }
+
+      @media (max-width: 850px) {
+        img {
+          height: 100px;
+          /* width: inherit; */
+        }
+        .subtitle {
+          font-size: 1.2em;
+        }
+        blockquote {
+          font-size: 1em;
+        }
+        .fa-svelte {
+          width: 1.2em;
+          height: 1.2em;
+        }
       }
     </style>
   </head>
@@ -126,15 +134,19 @@
   <body>
     <div id="top">
       <div class="contents">
-        <!-- <img src="logo.svg" /> -->
-        <h1 class="title"><img src="logo_name.svg" alt="Gareth Williams" /></h1>
-        <!-- <img src="logo_text.svg" /> -->
-        <!-- <div class="title"><img src="logo_text.svg" />GARETH WILLIAMS</div> -->
-        <h2 class="subtitle">RandomSyntax.Net</h2>
+        <!-- <img src="logo.svg" alt="logo" /> -->
+        <h1 class="title">
+          <!-- <img src="logo_text.svg" alt="Gareth Williams" /> -->
+          <img src="logo_name.svg" alt="Gareth Williams" />
+        </h1>
       </div>
     </div>
     <div id="bottom">
       <div class="contents">
+        <!-- <h2 class="subtitle">
+          <span style="font-weight: bolder;">Gareth</span>
+          <span style="font-weight: bolder;">Williams</span>
+        </h2> -->
         <div class="social-container">
           <a
             class="btn-github"
