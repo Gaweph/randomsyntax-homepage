@@ -2,7 +2,6 @@ body {
   font-family: Ubuntu, Dosis, sans-serif;
   margin: 0px;
   padding: 0px;
-  font-size: 1.2rem;
   line-height: 1.6;
 }
 #sapper {
@@ -23,33 +22,13 @@ h3,
 h4,
 h5,
 h6 {
-  /* margin: 0 0 0.5em 0; */
-  /* font-weight: 400; */
-  /* line-height: 1.2; */
-  text-transform: uppercase;
-  /* font-size: 1.5rem; */
-}
-
-@media (max-width: 400px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-transform: uppercase;
-    font-size: 1em;
-  }
+  /* text-transform: uppercase; */
 }
 
 .container {
   margin-right: auto; /* 1 */
   margin-left: auto; /* 1 */
-
   max-width: 960px; /* 2 */
-
-  padding-right: 10px; /* 3 */
-  padding-left: 10px; /* 3 */
 }
 
 button {
@@ -59,4 +38,16 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+@media (max-width: 400px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1em;
+    font-size: 1.2rem;
+  }
 }

@@ -16,14 +16,14 @@ pre[class*="language-"] {
   white-space: pre-wrap;
   word-wrap: normal;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   color: #3caea3;
   text-shadow: none;
 }
 
 pre > code[class*="language-"] {
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
 }
 
 pre[class*="language-"],
