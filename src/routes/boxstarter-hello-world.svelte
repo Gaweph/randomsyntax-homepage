@@ -10,9 +10,11 @@
   const date = "2016-08-17 21:04:00";
   const tags = ["software", "automation"];
   const projects = [];
+
 </script>
 
 <PostTop {title} {tags} {projects} />
+
 <PostContents>
   <PostSection title="Whats the problem">
     Setting up a new machine is always a bit of a pain. Wouldn't it be nice if
