@@ -10,13 +10,13 @@
 </script>
 
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import Prism from "../components/PrismJS.svelte";
-  import Callout from "../components/Callout.svelte";
-  import Vimeo from "../components/Vimeo.svelte";
-  import Gallery from "../components/Gallery.svelte";
-  import PostSection from "../components/Post-Section.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import Prism from "$components/PrismJS.svelte";
+  import Callout from "$components/Callout.svelte";
+  import Vimeo from "$components/Vimeo.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import PostSection from "$components/Post-Section.svelte";
 
   const title = "Mecanim Animation From Transform";
   const date = "2016-10-17 21:30:00";
@@ -51,7 +51,7 @@
   <br />
   <Gallery
     useThumbnail={false}
-    images={['/blog/content/images/unity3d-animation-from-transform/Standard_asset_Animator_Robot_kyle.png']} />
+    images={['/content/blog/images/unity3d-animation-from-transform/Standard_asset_Animator_Robot_kyle.png']} />
   <br />
 
   <PostSection title="Animation States and Variables">
@@ -64,7 +64,7 @@
   <br />
   <Gallery
     useThumbnail={false}
-    images={['/blog/content/images/unity3d-animation-from-transform/ThirdPersonAnimatorController.png']} />
+    images={['/content/blog/images/unity3d-animation-from-transform/ThirdPersonAnimatorController.png']} />
   <br />
   The value of
   <strong>Forward</strong>

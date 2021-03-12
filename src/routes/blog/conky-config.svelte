@@ -10,13 +10,13 @@
 </script>
 
 <script>
-  import Gallery from "../components/Gallery.svelte";
-  import Prism from "../components/PrismJS.svelte";
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import Callout from "../components/Callout.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import Prism from "$components/PrismJS.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import Callout from "$components/Callout.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
 
   const title = "Conky Config";
   const tags = ["config", "conky"];
@@ -35,7 +35,7 @@
       on my new arch desktop screenshot:
     </p>
 
-    <Gallery images={['/blog/content/images/conky-config/Conky_Config.png']} />
+    <Gallery images={['/content/blog/images/conky-config/Conky_Config.png']} />
 
     <p>
       In order to recreate this config you will need the

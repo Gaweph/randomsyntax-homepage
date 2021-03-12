@@ -1,9 +1,9 @@
 <script>
-  import Gallery from "../components/Gallery.svelte";
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
 
   const title = "3D Printer 2 - Leaking";
   const tags = ["hardware", "build"];
@@ -11,14 +11,14 @@
   const date = "2014-01-31";
 
   const photos_toohot = [
-    "/blog/content/images/3d-printer-leaking/leaking.jpg",
-    "/blog/content/images/3d-printer-leaking/disasembly2.jpg",
-    "/blog/content/images/3d-printer-leaking/disasembly.jpg"
+    "/content/blog/images/3d-printer-leaking/leaking.jpg",
+    "/content/blog/images/3d-printer-leaking/disasembly2.jpg",
+    "/content/blog/images/3d-printer-leaking/disasembly.jpg"
   ];
 
   const photos_back_in_business = [
-    "/blog/content/images/3d-printer-leaking/cleaned1.jpg",
-    "/blog/content/images/3d-printer-leaking/cleaned2.jpg"
+    "/content/blog/images/3d-printer-leaking/cleaned1.jpg",
+    "/content/blog/images/3d-printer-leaking/cleaned2.jpg"
   ];
 </script>
 

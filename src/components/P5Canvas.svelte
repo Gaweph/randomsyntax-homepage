@@ -26,7 +26,7 @@
 </style>
 
 <svelte:head>
-  <script src="/content/js/p5.{p5Version}.min.js" on:load={p5Loaded}>
+  <script src="/content/blog/js/p5.{p5Version}.min.js" on:load={p5Loaded}>
 
   </script>
 </svelte:head>

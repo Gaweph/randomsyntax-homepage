@@ -1,21 +1,21 @@
 <script>
-  import Gallery from "../components/Gallery.svelte";
-  import Callout from "../components/Callout.svelte";
-  import Vimeo from "../components/Vimeo.svelte";
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import Callout from "$components/Callout.svelte";
+  import Vimeo from "$components/Vimeo.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
 
   const title = "3D Printer 4 - Auto Bed Levelling";
   const date = "2014-06-19 13:43:03";
   const tags = ["hardware"];
   const projects = ["3D-Printer"];
   const photos_auto_leveling = [
-    "/blog/content/images/auto-bed-levelling/fsr_a.jpg",
-    "/blog/content/images/auto-bed-levelling/fsr_b.jpg",
-    "/blog/content/images/auto-bed-levelling/electronics_a.jpg",
-    "/blog/content/images/auto-bed-levelling/electronics_b.jpg"
+    "/content/blog/images/auto-bed-levelling/fsr_a.jpg",
+    "/content/blog/images/auto-bed-levelling/fsr_b.jpg",
+    "/content/blog/images/auto-bed-levelling/electronics_a.jpg",
+    "/content/blog/images/auto-bed-levelling/electronics_b.jpg"
   ];
 </script>
 

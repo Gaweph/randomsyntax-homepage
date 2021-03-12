@@ -1,10 +1,10 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import Callout from "../components/Callout.svelte";
-  import Vimeo from "../components/Vimeo.svelte";
-  import Link from "../components/Link.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import Callout from "$components/Callout.svelte";
+  import Vimeo from "$components/Vimeo.svelte";
+  import Link from "$components/Link.svelte";
 
   const title = "Time Game 2 - Character Animation";
   const date = "2016-10-15 21:12:00";

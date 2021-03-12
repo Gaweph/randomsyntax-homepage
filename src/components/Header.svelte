@@ -53,7 +53,7 @@
     <div class="container">
       <div class="site-title">
         <a class="navbar-bg" rel="prefetch" href="/">
-          <img src="content/images/logo_name.svg" alt="Gareth Williams" />
+          <img src="/content/blog/images/logo_name.svg" alt="Gareth Williams" />
         </a>
       </div>
     </div>

@@ -1,10 +1,10 @@
 <script>
-  import Gallery from "../components/Gallery.svelte";
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import Callout from "../components/Callout.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import Callout from "$components/Callout.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
 
   const title = "3D Printer 1 - Build";
   const tags = ["hardware", "build"];
@@ -53,7 +53,7 @@
 
   <PostSection title="Photos">
     <Gallery
-      images={['/blog/content/images/3d-printer-build/Electronics1.jpg', '/blog/content/images/3d-printer-build/Electronics2.jpg', '/blog/content/images/3d-printer-build/Electronics3.jpg', '/blog/content/images/3d-printer-build/base.jpg', '/blog/content/images/3d-printer-build/base_with_alu_extrusions.jpg', '/blog/content/images/3d-printer-build/Base_alu_closeup.jpg', '/blog/content/images/3d-printer-build/base_top_carriage.jpg', '/blog/content/images/3d-printer-build/base_top_carriage2.jpg', '/blog/content/images/3d-printer-build/carriage.jpg', '/blog/content/images/3d-printer-build/carriage_with_wire.jpg', '/blog/content/images/3d-printer-build/axis_motors.jpg', '/blog/content/images/3d-printer-build/axis carriage2.jpg', '/blog/content/images/3d-printer-build/axis_carriage_3.jpg', '/blog/content/images/3d-printer-build/hotend.jpg', '/blog/content/images/3d-printer-build/readytoprint.jpg']} />
+      images={['/content/blog/images/3d-printer-build/Electronics1.jpg', '/content/blog/images/3d-printer-build/Electronics2.jpg', '/content/blog/images/3d-printer-build/Electronics3.jpg', '/content/blog/images/3d-printer-build/base.jpg', '/content/blog/images/3d-printer-build/base_with_alu_extrusions.jpg', '/content/blog/images/3d-printer-build/Base_alu_closeup.jpg', '/content/blog/images/3d-printer-build/base_top_carriage.jpg', '/content/blog/images/3d-printer-build/base_top_carriage2.jpg', '/content/blog/images/3d-printer-build/carriage.jpg', '/content/blog/images/3d-printer-build/carriage_with_wire.jpg', '/content/blog/images/3d-printer-build/axis_motors.jpg', '/content/blog/images/3d-printer-build/axis carriage2.jpg', '/content/blog/images/3d-printer-build/axis_carriage_3.jpg', '/content/blog/images/3d-printer-build/hotend.jpg', '/content/blog/images/3d-printer-build/readytoprint.jpg']} />
 
   </PostSection>
 

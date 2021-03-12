@@ -1,20 +1,20 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import Prism from "../components/PrismJS.svelte";
-  import Callout from "../components/Callout.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
-  import Link from "../components/Link.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import P5Canvas from "../components/P5Canvas.svelte";
-  import FullScreen from "../components/Full-Screen.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import Prism from "$components/PrismJS.svelte";
+  import Callout from "$components/Callout.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
+  import Link from "$components/Link.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import P5Canvas from "$components/P5Canvas.svelte";
+  import FullScreen from "$components/Full-Screen.svelte";
 
   const title = "Marching Squares";
   const date = "2019-07-09";
   const tags = ["p5"];
   const projects = [];
 
-  import sketch from "./marching-squares.js";
+  import sketch from "./marching-squares-js.js";
 </script>
 
 <PostTop {title} {tags} {projects} />

@@ -1,9 +1,9 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import Callout from "../components/Callout.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import Link from "../components/Link.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import Callout from "$components/Callout.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import Link from "$components/Link.svelte";
 
   const title = "Time Game 3 - WEBGL Demo [V0.01]";
   const date = "2016-12-29 21:23:00";

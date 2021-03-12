@@ -1,11 +1,11 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
-  import Link from "../components/Link.svelte";
-  import P5Canvas from "../components/P5Canvas.svelte";
-  import FullScreen from "../components/Full-Screen.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
+  import Link from "$components/Link.svelte";
+  import P5Canvas from "$components/P5Canvas.svelte";
+  import FullScreen from "$components/Full-Screen.svelte";
 
   const title = "Marching Squares Linear Interpolation";
   const date = "2019-07-25";

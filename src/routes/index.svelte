@@ -8,7 +8,7 @@
 	<!-- <Counter/> -->
 	<p>Visit the <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
 	
-<a href="boxstarter-hello-world">HELLO WORLD</a>
+<a preload="true" href="boxstarter-hello-world">HELLO WORLD</a>
 </main>
 
 <style lang="scss">

@@ -1,10 +1,10 @@
 <script>
-  import Gallery from "../components/Gallery.svelte";
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import Callout from "../components/Callout.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import Callout from "$components/Callout.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
 
   const title = "Arch Linux New Install";
   const date = "2014-01-31";
@@ -58,7 +58,7 @@
       chromium installed)
     </p>
     <Gallery
-      images={['/blog/content/images/arch-linux-new-install/arch_initial_screenshot.png']} />
+      images={['/content/blog/images/arch-linux-new-install/arch_initial_screenshot.png']} />
 
   </PostSection>
 

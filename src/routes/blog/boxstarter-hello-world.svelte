@@ -1,10 +1,10 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import Prism from "../components/PrismJS.svelte";
-  import Callout from "../components/Callout.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
-  import PostSection from "../components/Post-Section.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import Prism from "$components/PrismJS.svelte";
+  import Callout from "$components/Callout.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
+  import PostSection from "$components/Post-Section.svelte";
 
   const title = "My Boxstarter Script";
   const date = "2016-08-17 21:04:00";

@@ -1,12 +1,12 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import Gallery from "../components/Gallery.svelte";
-  import Callout from "../components/Callout.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
-  import Link from "../components/Link.svelte";
-  import Prism from "../components/PrismJS.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import Callout from "$components/Callout.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
+  import Link from "$components/Link.svelte";
+  import Prism from "$components/PrismJS.svelte";
 
   const title = "Test Private Methods with C#";
   const date = "2021-02-14";

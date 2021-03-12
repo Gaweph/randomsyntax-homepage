@@ -1,19 +1,19 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import Prism from "../components/PrismJS.svelte";
-  import Callout from "../components/Callout.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
-  import Link from "../components/Link.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import P5Canvas from "../components/P5Canvas.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import Prism from "$components/PrismJS.svelte";
+  import Callout from "$components/Callout.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
+  import Link from "$components/Link.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import P5Canvas from "$components/P5Canvas.svelte";
 
   const title = "Coding Challenge: Birds and Bees";
   const date = "2018-09-16";
   const tags = ["p5"];
   const projects = ["Coding-Challenge"];
 
-  import sketch from "./challenge-birds-and-bees.js";
+  import sketch from "../challenge-birds-and-bees.js";
 </script>
 
 <PostTop {title} {tags} {projects} />

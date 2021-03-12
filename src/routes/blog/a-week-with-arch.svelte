@@ -1,8 +1,8 @@
 <script>
-  import Gallery from "../components/Gallery.svelte";
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
 
   const title = "A week with Arch ";
   const tags = ["software", "setup"];
@@ -22,7 +22,7 @@
     <p>
       Here is what I finally have (I went for XFCE because it is lightweight).
     </p>
-    <Gallery images={['/blog/content/images/a_week_with_arch/arch_desktop.png']} />
+    <Gallery images={['/content/blog/images/a_week_with_arch/arch_desktop.png']} />
 
   </PostSection>
   <PostSection title="What I like">

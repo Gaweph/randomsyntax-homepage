@@ -1,11 +1,11 @@
 <script>
-  import Gallery from "../components/Gallery.svelte";
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import Callout from "../components/Callout.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
-  import Vimeo from "../components/Vimeo.svelte";
+  import Gallery from "$components/Gallery.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import Callout from "$components/Callout.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
+  import Vimeo from "$components/Vimeo.svelte";
 
   const title = "3D Printer 3 - Calibration";
   const tags = ["hardware", "build"];
@@ -41,7 +41,7 @@
 
     <!-- Gallery -->
     <Gallery
-      images={['/blog/content/images/3d-printer-calibration/calibration_a.jpg', '/blog/content/images/3d-printer-calibration/calibration_b.jpg', '/blog/content/images/3d-printer-calibration/calibration_c.jpg']} />
+      images={['/content/blog/images/3d-printer-calibration/calibration_a.jpg', '/content/blog/images/3d-printer-calibration/calibration_b.jpg', '/content/blog/images/3d-printer-calibration/calibration_c.jpg']} />
 
     <p>Its not quite there, but I would say its close.</p>
   </PostSection>

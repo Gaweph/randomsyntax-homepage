@@ -39,7 +39,7 @@
 
     </script>
   {:else}
-    <script src="/blog/content/js/p5.{p5Version}.min.js" on:load={scriptLoaded}>
+    <script src="/content/blog/js/p5.{p5Version}.min.js" on:load={scriptLoaded}>
 
     </script>
   {/if}

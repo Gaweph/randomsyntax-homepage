@@ -1,11 +1,11 @@
 <script>
-  import PostTop from "../components/Post-Top.svelte";
-  import PostContents from "../components/Post-Contents.svelte";
-  import Prism from "../components/PrismJS.svelte";
-  import Callout from "../components/Callout.svelte";
-  import Vimeo from "../components/Vimeo.svelte";
-  import PostSection from "../components/Post-Section.svelte";
-  import LinkExternal from "../components/Link-External.svelte";
+  import PostTop from "$components/Post-Top.svelte";
+  import PostContents from "$components/Post-Contents.svelte";
+  import Prism from "$components/PrismJS.svelte";
+  import Callout from "$components/Callout.svelte";
+  import Vimeo from "$components/Vimeo.svelte";
+  import PostSection from "$components/Post-Section.svelte";
+  import LinkExternal from "$components/Link-External.svelte";
 
   const title = "Time Game 1 - Implementing Time Travel";
   const date = "2016-10-09 22:30:00";
