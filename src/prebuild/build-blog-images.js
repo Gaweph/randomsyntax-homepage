@@ -68,4 +68,6 @@ async function resizeImages() {
   console.log("DoResize", "_thumbnail");
 }
 
-resizeImages();
+export const BuildBlogImages = async () => {
+  await resizeImages();
+}
