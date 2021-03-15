@@ -13,7 +13,7 @@
   const projects = [];
   const date = "2020-06-05";
 
-  import sketch from "../coding/10print/build/build";
+  import sketch from "./10print-js";
 </script>
 
 <PostTop {title} {tags} {projects} />
