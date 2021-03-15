@@ -1,5 +1,3 @@
-// import fs from "fs";
-// import path from "path";
 import { GetAllPosts } from "./postScrapper.js";
 import path from 'path';
 import fs from "fs";
@@ -9,9 +7,6 @@ const __dirname = path.dirname(__filename);
 
 var postsDir = __dirname + "/../routes/blog";
 var posts = GetAllPosts(postsDir);
-
-// console.log(postsDir);
-// console.log(posts);
 
 //json
 var jsonFilePath = __dirname + "/../../static/blog.json"
