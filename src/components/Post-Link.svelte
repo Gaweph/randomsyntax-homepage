@@ -3,8 +3,8 @@
 
   export let title = "";
   export let slug = "";
-  export let projects = [];
-  export let tags = [];
+  export let projects = "";
+  export let tags = "";
 </script>
 
 <style>
@@ -30,6 +30,6 @@
     <a rel="prefetch" href={slug}>{title}</a>
   </h2>
 
-  <PostTagsProjects {tags} {projects} />
+  <PostTagsProjects tags={tags.split(",")} projects={projects.split(",")} />
 
 </div>

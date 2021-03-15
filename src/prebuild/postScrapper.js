@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { TryGetFirstRegexMatch } from "./regexHelper";
+import { TryGetFirstRegexMatch } from "./regexHelper.js";
 
 export const GetAllPosts = (dir) => {
   var posts = fs
