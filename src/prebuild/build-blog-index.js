@@ -9,6 +9,14 @@ export const BuildBlogPosts = () => {
     var postsDir = __dirname + "/../routes/blog";
     var posts = GetAllPosts(postsDir);
 
+    console.log("A", posts);
+    posts.sort(function(a,b){
+      // Turn your strings into dates, and then subtract them
+      // to get a value that is either negative, positive, or zero.
+      return new Date(b.date) - new Date(a.date);
+    });
+    console.log("B", posts);
+
     //json
     var jsonFilePath = __dirname + "/../../static/blog.json"
     var jsonContents = JSON.stringify(posts);

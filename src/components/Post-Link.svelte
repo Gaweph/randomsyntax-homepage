@@ -5,6 +5,13 @@
   export let slug = "";
   export let projects = "";
   export let tags = "";
+
+  function getTags() {
+    return tags === '' ? [] : tags.split(",")
+  }
+  function getProjects() {
+    return projects === '' ? [] : projects.split(",")
+  }
 </script>
 
 <style>
@@ -30,6 +37,6 @@
     <a rel="prefetch" href={slug}>{title}</a>
   </h2>
 
-  <PostTagsProjects tags={tags.split(",")} projects={projects.split(",")} />
+  <PostTagsProjects tags={getTags()} projects={getProjects()} />
 
 </div>
