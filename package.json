@@ -5,7 +5,7 @@
 		"dev": "node src/prebuild/prebuild.js && svelte-kit dev",
 		"build": "node src/prebuild/prebuild.js && svelte-kit build",
 		"start": "node src/prebuild/prebuild.js && svelte-kit start",
-		"export": "node src/prebuild/prebuild.js && svelte-kit adapt"
+		"export": "svelte-kit adapt"
 	},
 	"devDependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.13.0",
