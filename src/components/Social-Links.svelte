@@ -1,16 +1,10 @@
 <script>
   import Icon from "$components/Icon.svelte";
-  // import { faTag as faPinterest } from "@fortawesome/free-solid-svg-icons";
   import {
     faGithub as faGithub,
      faTwitter as faTwitter,
      faPinterest as faPinterest
     } from "@fortawesome/free-brands-svg-icons";
-  // import {
-  //   faGithub,
-  //   faTwitter,
-    // faPinterest
-  // } from "@fortawesome/free-brands-svg-icons/";
 </script>
 
 <style>

@@ -9,6 +9,7 @@
 </svg>
 <script>
   export let icon;
+  export let large;
 
   let path = [];
   let classes = "";
@@ -16,7 +17,7 @@
 
   $: viewBox = "0 0 " + icon.icon[0] + " " + icon.icon[1];
 
-  $: classes = "fa-svelte " + ($$props.class ? $$props.class : "");
+  $: classes = "fa-svelte" + ($$props.class ? ' ' + $$props.class : "");
 
   $: path = icon.icon[4];
 </script>
@@ -27,5 +28,10 @@
     height: 1em;
     overflow: visible;
     display: inline-block;
+  }
+
+  .fa-svelte.large {
+    width: 1.5em;
+    height: 1.5em;
   }
 </style>
