@@ -12,7 +12,8 @@ export const GetAllPosts = (dir) => {
         path.extname(file).toLowerCase() === ".svelte" &&
         file.toLowerCase() !== "index.svelte" &&
         file.toLowerCase() !== "[slug].svelte" &&
-        !file.startsWith("_");
+        !file.startsWith("_") &&
+        !file.startsWith("$");
 
       return okFile && !isDirectory;
     })
