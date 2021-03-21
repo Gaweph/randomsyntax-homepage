@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#333333" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Dosis:regular,bold&subset=Latin"
+    />
+    
+  <!-- <link rel="stylesheet" href="/content/blog/css/prism-xonokai.css" /> -->
+  <link rel="stylesheet" href="/content/blog/css/prism-vs.css" />
+
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/color.css" />
+    <!-- <link rel="manifest" href="manifest.json" crossorigin="use-credentials" /> -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+	<title>Test Private Methods with C#</title>
+
+<link rel="modulepreload" href="/_app/$layout.svelte-e9c8a608.js">
+			<link rel="modulepreload" href="/_app/start-f5bdf764.js">
+			<link rel="modulepreload" href="/_app/inject_styles-0e3d93cc.js">
+			<link rel="modulepreload" href="/_app/Icon.svelte-7ea34d79.js">
+			<link rel="modulepreload" href="/_app/free-brands-svg-icons-c49a0578.js">
+			<link rel="modulepreload" href="/_app/test-private-methods.svelte-83364fdb.js">
+			<link rel="modulepreload" href="/_app/Post-Contents.svelte-0738cff8.js">
+			<link rel="modulepreload" href="/_app/Post-Tags-Projects.svelte-4d25858e.js">
+			<link rel="modulepreload" href="/_app/free-solid-svg-icons-650f6a7f.js">
+			<link rel="modulepreload" href="/_app/Callout.svelte-d8f802bc.js">
+			<link rel="modulepreload" href="/_app/Post-Section.svelte-ca8a2080.js">
+			<link rel="modulepreload" href="/_app/PrismJS.svelte-7a76d50f.js">
+			<link rel="stylesheet" href="/_app/start-1646ff03.css">
+			<link rel="stylesheet" href="/_app/Icon.svelte-f065ca59.css">
+			<link rel="stylesheet" href="/_app/$layout.svelte-3d17d116.css">
+			<link rel="stylesheet" href="/_app/Post-Tags-Projects.svelte-9f7931fe.css">
+			<link rel="stylesheet" href="/_app/Post-Contents.svelte-6aebd342.css">
+			<link rel="stylesheet" href="/_app/Callout.svelte-a9f481ba.css">
+			<link rel="stylesheet" href="/_app/PrismJS.svelte-3b79baee.css">
+
+
+		<script type="module">
+			import { start } from '/./_app/entry-086b7f1e.js';
+			start({
+				target: document.querySelector("#svelte"),
+				host: location.host,
+				paths: {"base":"","assets":"/."},
+				status: 200,
+				error: null,
+				session: void 0
+			});
+		</script>
+	</head>
+	<body class="bg-main">
+		<div id="svelte">
+
+
+<header id="masthead" role="banner" class="svelte-kq4biz"><nav><div class="container"><div class="site-title svelte-kq4biz"><a class="navbar-bg svelte-kq4biz" rel="prefetch" href="/"><img src="/content/blog/images/logo_name.svg" alt="Gareth Williams" class="svelte-kq4biz"></a></div></div></nav></header>
+
+<main class="container svelte-6mzi2x">
+<div class="svelte-1bjk9zc"><h1 class="title"><span>Test Private Methods with C#</span></h1>
+  <div>
+  
+  <a rel="prefetch" href="/blog/tags/unit test/" class="svelte-oecx31"><div class="tag svelte-10a3ux4"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg>
+  unit test</div>
+    </a><a rel="prefetch" href="/blog/tags/c-sharp/" class="svelte-oecx31"><div class="tag svelte-10a3ux4"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg>
+  c-sharp</div>
+    </a></div></div>
+<div class="post-contents svelte-1lqreoz"><h2>TL;DR</h2>
+Need the solution in the hurry?  Here you go:
+  <div>
+
+  
+    <pre class="svelte-gtvtjc"><code class="language-csharp">using System;
+using System.Reflection;
+namespace TestUtilities
+{
+    public static class TestHelpers
+    {
+        public static object RunPrivateMethod(this object obj, string methodName, params object[] args)
+        {
+            var method = obj
+                .GetType()
+                .GetMethod(methodName, BindingFlags.NonPublic | BindingFlags.Instance);
+            if (method == null)
+            {
+                throw new ArgumentException(
+                    $&quot;{obj.GetType()} does not contain the method {methodName}&quot;, 
+                    &quot;methodName&quot;
+                );
+            }
+            return method.Invoke(obj, args);
+        }
+    }
+}</code></pre></div>
+Use it like this
+<div>
+
+  
+    <pre class="svelte-gtvtjc"><code class="language-csharp">var res1 = testObject.RunPrivateMethod(&quot;SecretInternalMethod&quot;);
+var res2 = testObject.RunPrivateMethod(&quot;SecretInternalMethodWithArgs&quot;, arg1, arg2);</code></pre></div>
+
+<h2>Explanation</h2>
+We have a class with some internal code that we would like to run in isolation to test that it is doing what we think it is doing.  
+<br><br>
+I know there are many arguments to  be made as to whether we should be doing this.  Many will suggest that having lots of logic in a private method means that it should probably be refactored into a helper class or service layer,  
+while this is true in some cases the fact is that sometimes we have some code in a class (legacy code) and we want to test it.
+
+<div class="bs-callout bs-callout-primary svelte-71s8fy"><h3 class="svelte-71s8fy">Great, I can test my private methods.  But should I?</h3>
+  Running logic inside of private method suggests that the code should be refactored (maybe moved to a helper class or a service layer).  
+The fact is that sometimes we need to test existing/legacy code or for a number of reasons the logic is in a private method and we need to test it.
+</div>
+
+The main probelm we have is that if we make an instance of a class we just don&#39;t have access to its private stuff from the outside.  
+Luckily for us the <code class="language-csharp">System.Reflection</code> namespace can help us get access to the private members and invoke them.
+
+<br><br>
+
+The above solution is an extension method that  allows any object to call <code class="language-csharp">RunPrivateMethod()</code>.
+<br><br>
+
+The magic happens mainly with <code class="language-csharp">BindingFlags.NonPublic | BindingFlags.Instance</code> 
+which allows us to use reflection to get the <code class="language-csharp">MethodInfo</code> for the specified private method.
+
+
+<h2>Usage</h2>
+The following usage example shows how this would be used in a unit test
+
+<div>
+
+  
+    <pre class="svelte-gtvtjc"><code class="language-csharp">
+[Fact]
+public void GetFullName__Should_Return_ExpectedResult()
+{
+    // ARRANGE
+    var test = new Person { FirstName = &quot;Ace&quot;, LastName = &quot;Rimmer&quot; };
+
+    // ACT
+    var name = test.RunPrivateMethod(&quot;GetFullName&quot;); // &lt;-- without args
+    var nickname = test.RunPrivateMethod(&quot;GetFullNameWithNickname&quot;, &quot;what a guy!&quot;); // &lt;-- with args
+    
+    // ASSERT
+    name.Should().Be(&quot;Ace Rimmer&quot;);
+    nickname.Should().Be(&quot;Ace &#39;what a guy!&#39; Rimmer&quot;);
+}
+
+public class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+
+    private string GetFullName() // &lt;-- Private Method
+    {
+        return $&quot;{FirstName} {LastName}&quot;;
+    }
+
+    private string GetFullNameWithNickname(string nickname) // &lt;-- Private Method with argument
+    {
+        return $&quot;{FirstName} &#39;{nickname}&#39; {LastName}&quot;;
+    }
+}
+</code></pre></div></div></main>
+
+<footer class="svelte-1hmvtax"><div class="container"><div class="social-container svelte-1hmvtax"><div class="social-container svelte-12j442c"><a href="https://github.com/Gaweph" class="btn-github svelte-12j442c" target="_blank" rel="external"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+  
+  <a href="https://uk.pinterest.com/gaweph" class="btn-pinterest svelte-12j442c" target="_blank" rel="external"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg></a></div></div>
+    <div class="site-sub-title svelte-1hmvtax">RandomSyntax.net
+      </div></div></footer>
+
+
+
+	
+</div>
+	</body>
+</html>

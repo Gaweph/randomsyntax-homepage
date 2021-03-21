@@ -5,7 +5,8 @@
 		"dev": "node src/prebuild/prebuild.js && svelte-kit dev",
 		"build": "node src/prebuild/prebuild.js && svelte-kit build",
 		"start": "node src/prebuild/prebuild.js && svelte-kit start",
-		"export": "svelte-kit adapt"
+		"copy-folder-build-to-docs": "ncp build docs",
+		"export": "svelte-kit adapt && npm run copy-folder-build-to-docs"
 	},
 	"devDependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -16,6 +17,7 @@
 		"@sveltejs/kit": "next",
 		"@sveltejs/snowpack-config": "next",
 		"fa-svelte": "^3.1.0",
+		"ncp": "^2.0.0",
 		"sass": "^1.0.0",
 		"sharp": "^0.27.2",
 		"svelte": "^3.29.0",
