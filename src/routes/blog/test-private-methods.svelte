@@ -80,7 +80,23 @@ which allows us to use reflection to get the <Prism language="csharp" inline="tr
 The following usage example shows how this would be used in a unit test
 
 <Prism language="csharp" code={
-`public class Person
+`
+[Fact]
+public void GetFullName__Should_Return_ExpectedResult()
+{
+    // ARRANGE
+    var test = new Person { FirstName = "Ace", LastName = "Rimmer" };
+
+    // ACT
+    var name = test.RunPrivateMethod("GetFullName"); // <-- without args
+    var nickname = test.RunPrivateMethod("GetFullNameWithNickname", "what a guy!"); // <-- with args
+    
+    // ASSERT
+    name.Should().Be("Ace Rimmer");
+    nickname.Should().Be("Ace 'what a guy!' Rimmer");
+}
+
+public class Person
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -90,23 +106,12 @@ The following usage example shows how this would be used in a unit test
         return $"{FirstName} {LastName}";
     }
 
-    private string GetFullNameWithNickname(string nickname) // <-- Private Method
+    private string GetFullNameWithNickname(string nickname) // <-- Private Method with argument
     {
         return $"{FirstName} '{nickname}' {LastName}";
     }
 }
-[Fact]
-public void GetFullName__Should_Return_ExpectedResult()
-{
-    // ARRANGE
-    var test = new Person { FirstName = "Ace", LastName = "Rimmer" };
-    // ACT
-    var name = test.RunPrivateMethod("GetFullName"); // <-- name of method
-    var nickname = test.RunPrivateMethod("GetFullNameWithNickname", "what a guy!"); // <-- with args
-    // ASSERT
-    name.Should().Be("Ace Rimmer");
-    nickname.Should().Be("Ace 'what a guy!' Rimmer");
-}`} 
+`} 
 />
 
 </PostSection>
