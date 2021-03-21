@@ -15,7 +15,7 @@
 
 <Header {segment} />
 
-<main class="container">
+<main class="container x">
   <slot />
 </main>
 
