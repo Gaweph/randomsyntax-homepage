@@ -1,9 +1,15 @@
 <script>
   import Icon from "$components/Icon.svelte";
+  // import { faTag as faPinterest } from "@fortawesome/free-solid-svg-icons";
+  import {
+    faGithub as faGithub,
+     faTwitter as faTwitter,
+     faPinterest as faPinterest
+    } from "@fortawesome/free-brands-svg-icons";
   // import {
   //   faGithub,
   //   faTwitter,
-  //   faPinterest
+    // faPinterest
   // } from "@fortawesome/free-brands-svg-icons/";
 </script>
 
@@ -43,7 +49,7 @@
     class="btn-github"
     target="_blank"
     rel="external">
-    <!-- <Icon icon={faGithub} /> -->
+    <Icon icon={faGithub} />
   </a>
   <!-- <a
     href="https://twitter.com/Gaweph"
@@ -57,7 +63,7 @@
     class="btn-pinterest"
     target="_blank"
     rel="external">
-    <!-- <Icon icon={faPinterest} /> -->
+    <Icon icon={faPinterest} />
   </a>
 
 </div>

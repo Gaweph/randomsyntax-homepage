@@ -8,8 +8,8 @@
 		"export": "svelte-kit adapt"
 	},
 	"devDependencies": {
-		"@fortawesome/free-brands-svg-icons": "^5.13.0",
-		"@fortawesome/free-solid-svg-icons": "^5.13.0",
+		"@fortawesome/free-brands-svg-icons": "^5.15.3",
+		"@fortawesome/free-solid-svg-icons": "^5.15.3",
 		"@snowpack/plugin-typescript": "^1.0.0",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.0",
