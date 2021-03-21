@@ -73,14 +73,6 @@
   }
 </style>
 
-<svelte:head>
-  <link rel="stylesheet" href="/content/blog/css/prism-xonokai.css" />
-  <!-- <link rel="stylesheet" href="/prism-hopscotch.css" /> -->
-  <!-- <link rel="stylesheet" href="/prism-atom-dark.css" /> -->
-  <!-- <link rel="stylesheet" href="/content/css/prism-vs.css" />   -->
-  <!-- <link rel="stylesheet" href="/content/css/prism-ghcolors.css" /> -->
-</svelte:head>
-
 {#if inline}
     <code class="language-{language}">{code}</code>
 {:else}
