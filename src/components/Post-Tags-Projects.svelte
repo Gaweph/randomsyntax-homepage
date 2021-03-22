@@ -15,16 +15,16 @@
 
 <div>
   {#each projects as project}
-    <a rel="prefetch" href="/blog/projects/{project}/">
+    <!-- <a rel="prefetch" href="/blog/projects/{project}/"> -->
       <Project {project} />
-    </a>
+    <!-- </a> -->
   {/each}
   {#if tags.length > 0 && projects.length > 0}
     <!-- <br /> -->
   {/if}
   {#each tags as tag}
-    <a rel="prefetch" href="/blog/tags/{tag}/">
+    <!-- <a rel="prefetch" href="/blog/tags/{tag}/"> -->
       <Tag {tag} />
-    </a>
+    <!-- </a> -->
   {/each}
 </div>
