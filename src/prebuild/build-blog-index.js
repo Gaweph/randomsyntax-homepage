@@ -26,7 +26,7 @@ export const BuildBlogPosts = () => {
     // blog posts component
     var componentFilePath = __dirname + "/../components/Blog-Posts.svelte";
     var postsContents = posts.map(x=> `
-    <PostLink title="${x.title}" slug="blog/${x.slug}" projects="${x.projects}" tags="${x.tags}" />
+    <PostLink title="${x.title}" slug="/blog/${x.slug}" projects="${x.projects}" tags="${x.tags}" />
     `).join('');
 
     var componentContents = `
