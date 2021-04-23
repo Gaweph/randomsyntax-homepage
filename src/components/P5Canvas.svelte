@@ -1,4 +1,7 @@
-<script>
+<script context="module" lang="ts">
+  declare const p5: any;
+</script>
+<script lang="ts">
   import { onMount, onDestroy } from "svelte";
   // export let src;
   export let sketch;
@@ -12,7 +15,7 @@
   function sketchStarted() {
     var div = document.getElementById(id);
     for(var i = 0; i < div.childNodes.length; i++) {
-      var foundCanvas = div.childNodes[i].className == "p5Canvas";
+      var foundCanvas = div.children[i].className == "p5Canvas";
       if(foundCanvas) {
         return true;
       }
@@ -21,10 +24,12 @@
   }
 
   function tryStartSketch() {
-    console.log("tryStartSketch");
-    if(p5 && sketch && !sketchStarted()) {
-      myp5 = new p5(sketch, id);
-      console.log("starting sketch", sketch);
+    try {
+      if(p5 && sketch && !sketchStarted()) {
+        myp5 = new p5(sketch, id);
+      }
+    } catch(ex) {
+      // catch gracefully
     }
   }
 
@@ -53,9 +58,6 @@
 </style>
 
 <svelte:head>
-  <script src="/content/blog/js/p5.{p5Version}.min.js">
-
-  </script>
+  <script src="/content/blog/js/p5.{p5Version}.min.js"></script>
 </svelte:head>
-
 <div {id} style="position: relative; width: {width}; height: {height}" />

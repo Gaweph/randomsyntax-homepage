@@ -27,14 +27,4 @@
     src="https://gaweph.github.io/TimeGame-WebGL-Demo/V0.01//"
     title="Marching Squares Linear Interpolation" />
 
-  <Callout title="Explanation">
-    I have tried to explain how some of the game mechanics work in other
-    <Link href="/blog/projects/Time Travel Game">TimeGame project posts</Link>
-
-  </Callout>
-
-  <Callout title="Just ask :)">
-    If you need any further explanation or help then feel free to ask :) Ill try
-    my best to answer.
-  </Callout>
 </PostContents>
