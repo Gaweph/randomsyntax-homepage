@@ -68,6 +68,10 @@
     overflow: auto;
   }
 
+  pre > code[class*="language-"] {
+      font-size: 0.8em;
+  }
+
   h4 {
     margin-bottom: 0px;
   }
