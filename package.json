@@ -6,7 +6,7 @@
 		"build": "node src/prebuild/prebuild.js && svelte-kit build",
 		"start": "node src/prebuild/prebuild.js && svelte-kit start",
 		"copy-folder-build-to-docs": "ncp build docs",
-		"export": "svelte-kit build && svelte-kit adapt"
+		"export": "node src/prebuild/prebuild.js && svelte-kit build && svelte-kit adapt"
 	},
 	"devDependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.15.3",
