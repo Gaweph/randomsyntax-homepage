@@ -13,6 +13,7 @@
 <div class="fullscreen">
 	<div id="top">
 		<div class="contents">
+      <img class="logo-and-title" src="/content/blog/images/logo_name.svg" alt="Gareth Williams" />
 			<img class="logo" src="content/blog/images/logo.svg" alt="logo" />
 			<div class="home-title">
 				<span style="font-weight: bolder;">Gareth</span>
@@ -22,8 +23,8 @@
 	</div>
 	<div id="bottom">
 		<div class="contents">		
-			<div class="tagline">
-				- Striving for competence -
+			<div class="quote">
+				<span class="quote-text">'Ace, what a guy'</span> <span class="quote-author">- Anonymous</span>
 			</div>
 
 			<div class="social-container">
@@ -86,10 +87,19 @@
 		left:0px;
 		right:0px;
 	}
+
 	.logo {
-        height: 200px;
-        max-width: 100%;
-      }
+    height: 200px;
+    max-width: 100%;
+  }
+  
+  .logo-and-title
+  {
+    display: none;
+    height: 100px;
+    max-width: 100%;
+  }
+
       #top,
       #bottom {
         position: relative;
@@ -158,9 +168,12 @@
         font-size: 4em;
       }
 
-      .tagline {
+      .tagline, .quote {
         font-size: 1.2em;
-        text-transform: uppercase;
+      }
+
+      .quote-text {
+        font-style: italic
       }
 
       .social-container {
@@ -168,21 +181,39 @@
         letter-spacing: 0.2em;
         margin: 20px;
       }
-	  
-      @media (max-width: 850px) {
-        img {
+      @media (max-width: 850px) {        
+        .logo {
           height: 100px;
-          /* width: inherit; */
+          max-width: 100%;
         }
         .home-title {
           font-size: 2em;
         }
-        .tagline {
+        .tagline, .quote {
           font-size: 1em;
         }
         .fa-svelte {
           width: 1.2em;
           height: 1.2em;
+        }
+      }
+
+      @media (max-height: 560px)
+      {
+        .logo {
+          height: 100px;
+          max-width: 100%;
+        }
+      }
+
+      @media (max-height: 560px)
+      {
+        // Inline logo and name
+        .logo-and-title {
+          display: inline-block;
+        }
+        .logo, .home-title {
+          display: none;
         }
       }
 
@@ -206,5 +237,4 @@
         overflow:hidden;
         text-indent: -9999px;
       }
-	  
 </style>
