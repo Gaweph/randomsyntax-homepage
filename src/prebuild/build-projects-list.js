@@ -74,16 +74,18 @@ ${readme}
             // projects.push({id: item.id, name: item.name, readme: readme, tags: item.topics, description: item.description});
         }
             
+        var projectTitles = projects.map(x=>
+`
+<PostLink title="${x.name}" slug="/projects/${x.name}" tags="${x.topics.filter(x => x != projectTag).join(',')}">
+${x.description}
+</PostLink>
+`);
 const indexFileContents = `
 <script>
     import PostLink from '$components/Post-Link.svelte';
 </script>
 
-${projects.map(x=>`
-<PostLink title="${x.name}" slug="/projects/${x.name}" tags="${x.topics.filter(x => x != projectTag).join(',')}">
-${x.description}
-</PostLink>
-`).toString()}
+${projectTitles.join('')}
 `;
         var indexFilePath = __dirname + "/../routes/Projects/index.svelte";
         fs.writeFileSync(indexFilePath, indexFileContents,{encoding:'utf8',flag:'w'});
