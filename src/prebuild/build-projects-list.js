@@ -46,20 +46,33 @@ export const BuildProjects = async () => {
                 console.error(ex);
             }
             
+            // const description = item.description
             const projectContent = `
-            <script>
-                import Prism from "$components/PrismJS.svelte";
-            </script>
-            ${readme}
-            `;
+<script>
+    import PostTop from "$components/Post-Top.svelte";
+    import PostContents from "$components/Post-Contents.svelte";
+    import Prism from "$components/PrismJS.svelte";
+    import PostSection from "$components/Post-Section.svelte";
+</script>
+
+<PostTop title="${item.name}" tags=${item.topics.join(',')} />
+<PostContents>
+    <PostSection>
+${readme}
+    </PostSection>
+</PostContents>
+`;
+
+            var projectFilePath = __dirname + `/../routes/Projects/${item.name}.svelte`;
+            fs.writeFileSync(projectFilePath, projectContent,{encoding:'utf8',flag:'w'});
 
             projects.push({id: item.id, name: item.name, readme: readme});
         }
             
-        var fileContents = projects.map(x=>x.name).toString();
-        var componentFilePath = __dirname + "/../components/Projects-List.svelte";
-        fs.writeFileSync(componentFilePath, fileContents,{encoding:'utf8',flag:'w'});
-        console.log("Created", componentFilePath);
+        var indexFileContents = projects.map(x=>x.name).toString();
+        var indexFilePath = __dirname + "/../routes/Projects/index.svelte";
+        fs.writeFileSync(indexFilePath, indexFileContents,{encoding:'utf8',flag:'w'});
+        console.log("Created", indexFilePath);
     }
     catch(ex)
     {
