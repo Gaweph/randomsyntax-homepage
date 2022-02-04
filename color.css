@@ -67,8 +67,8 @@ h6 {
 .tag,
 .project,
 button {
-  background-color: #3caea3;
-  color: white;
+  /* background-color: #3caea3;
+  color: white; */
   border: 1px solid #173f5f;
 }
 
@@ -79,8 +79,8 @@ button {
 button:hover,
 button:focus {
   /* color: #f5f5f5; */
-  color: #fff;
-  background-color: #097669;
+  /* color: #fff;
+  background-color: #097669; */
 }
 .post-link-title a {
   color: inherit;
