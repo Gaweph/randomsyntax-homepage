@@ -39,4 +39,6 @@
 
   <PostTagsProjects tags={getTags()} projects={getProjects()} />
 
+  <slot />
+  
 </div>
