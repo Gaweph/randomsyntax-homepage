@@ -30,7 +30,7 @@
 			<div class="social-container">
 				<a
 					href="https://github.com/Gaweph"
-					class="btn-github"
+					class="btn-github icon-container"
 					target="_blank"
 					rel="external">
 					<Icon class="large" icon={faGithub} />
@@ -38,16 +38,15 @@
 				</a>
 				<a
 					href="https://uk.pinterest.com/gaweph"
-					class="btn-pinterest"
+					class="btn-pinterest icon-container"
 					target="_blank"
 					rel="external">
 					<Icon class="large" icon={faPinterest} />
 					<span class="screen-reader-only">gaweph on Pinterest</span>
 				</a>
         
-				<div class="icon-container">          
+				<div class="btn-projects icon-container">          
 					<a
-						class="btn-projects"
 						preload="true"
 						href="projects"
 						>
@@ -81,9 +80,8 @@
         </div>
 
         
-				<div class="icon-container">
+				<div class="btn-blog icon-container">
 					<a
-						class="btn-blog"
 						preload="true"
 						href="blog"
 						>
@@ -115,6 +113,12 @@
 </div>
 
 <style lang="scss">
+
+  $projects-color: #158ca9;
+  $blog-color: #ed553b;
+  $github-color: #191919;
+  $pinterest-color: #cb2027;
+  $underline-text-border-width: 0px; //1px
 
 	.fullscreen {
 		position: absolute;
@@ -181,33 +185,33 @@
 
   .btn-github:hover,
   .btn-github:focus {
-    color: #191919;
+    color: $github-color;
   }
   .btn-pinterest:hover,
   .btn-pinterest:focus {
-    color: #cb2027;
+    color: $pinterest-color;
   }
 
-  #blog-arrow {
-    border-bottom: 2px solid #ed553b;
+  .btn-blog a:hover,
+  .btn-blog a:focus {
+    color: $blog-color;
+    fill: $blog-color;
+    stroke: $blog-color;
   }
 
-  .btn-blog:hover,
-  .btn-blog:focus {
-    color: #ed553b;
-    fill: #ed553b;
-    stroke: #ed553b;
-  }
-
-  .btn-projects:hover,
-  .btn-projects:focus {
-    color: rgb(47, 66, 151);
-    fill: rgb(47, 66, 151);
-    stroke: rgb(47, 66, 151);
+  .btn-projects a:hover,
+  .btn-projects a:focus {
+    color: $projects-color;
+    fill: $projects-color;
+    stroke: $projects-color;
   }
 
   #projects-arrow {
-    border-bottom: 2px solid rgb(47, 66, 151);
+    border-bottom: $underline-text-border-width solid $projects-color;
+  }
+  
+  #blog-arrow {
+    border-bottom: $underline-text-border-width solid $blog-color;
   }
 
   .home-title {
