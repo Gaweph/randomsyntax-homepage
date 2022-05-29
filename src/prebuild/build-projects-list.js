@@ -12,7 +12,16 @@ import showdown from 'showdown';
 let replaceAll = function(str, find, replace)
 {
     return str.replace(new RegExp(find, 'g'), replace);
-}
+};
+
+let ensureDirectoryExistence = function (filePath) {
+    var dirname = path.dirname(filePath);
+    if (fs.existsSync(dirname)) {
+        return true;
+    }
+    ensureDirectoryExistence(dirname);
+    fs.mkdirSync(dirname);
+};
 export const BuildProjects = async () => {
 
     const githubUserName = "Gaweph";
@@ -22,6 +31,7 @@ export const BuildProjects = async () => {
         const projects = response.data.filter(x => x.topics.indexOf(projectTag) != -1);
 
         const converter = new showdown.Converter();
+        
         for(var i = 0; i < projects.length; i++) 
         {
             const item = projects[i];
@@ -68,6 +78,7 @@ ${readme}
 `;
 
             var projectFilePath = __dirname + `/../routes/Projects/${item.name}.svelte`;
+            ensureDirectoryExistence(projectFilePath);
             fs.writeFileSync(projectFilePath, projectContent,{encoding:'utf8',flag:'w'});
 
             // projects.push({id: item.id, name: item.name, readme: readme, tags: item.topics, description: item.description});
