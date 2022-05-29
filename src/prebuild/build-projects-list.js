@@ -9,6 +9,10 @@ import axios from "axios";
 // var request = require('request');
 import showdown from 'showdown';
 
+let replaceAll = function(str, find, replace)
+{
+    return str.replace(new RegExp(find, 'g'), replace);
+}
 export const BuildProjects = async () => {
 
     const githubUserName = "Gaweph";
@@ -26,18 +30,13 @@ export const BuildProjects = async () => {
             let readme = '';
             try {
                 const readMeResponse = await axios.get(readMeUrl);
-                // console.log(readMeResponse.data + "");
                 const md = readMeResponse.data + "";
-                // console.log("MD", md);
-                // readMeMarkDown = md;//.toString();
                 readme = converter.makeHtml(md);
-                // console.log("AAAA", readme, "BBBB");
 
-                // <pre><code class="typescript language-typescript"></code>
-                readme = readme.replace(new RegExp('<pre><code( class=".*")?>', 'g'), '<Prism language="csharp" code={`')
-                // console.log(readme.indexOf('</code></pre>'));
-                readme = readme.replace(new RegExp('</code></pre>', 'g'), '`} />')
-                // console.log(readme.indexOf('</code></pre>'));
+                readme = replaceAll(readme, "&gt;", ">");
+                readme = replaceAll(readme, "&lt;", "<");
+                readme = replaceAll(readme, '<pre><code( class=".*")?>', '<Prism language="csharp" code={`')
+                readme = replaceAll(readme, '</code></pre>', '`} />')
             }
             catch(ex) {
                 // couldn't get readme
