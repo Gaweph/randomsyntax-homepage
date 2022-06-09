@@ -6,6 +6,7 @@
   div {
     margin: 0px;
     padding: 10px;
+    position: relative;
   }
   
   @media (min-width: 750px) {

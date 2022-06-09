@@ -18,6 +18,7 @@
   .post-link-container {
     margin: 10px;
     padding: 10px;
+    position: relative;
     /* background-color: #ccc; */
     /* width: 50%; */
     /* max-width: 40%; */

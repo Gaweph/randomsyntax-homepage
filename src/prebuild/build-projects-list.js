@@ -61,6 +61,7 @@ export const BuildProjects = async () => {
     import PostContents from "$components/Post-Contents.svelte";
     import Prism from "$components/PrismJS.svelte";
     import PostSection from "$components/Post-Section.svelte";
+    import OpenInGithub from "$components/Open-In-Github.svelte";
 
     const title = "${item.name}";
     const tags = ${JSON.stringify(item.topics.filter(x => x != projectTag))};
@@ -71,14 +72,16 @@ export const BuildProjects = async () => {
 </script>
 
 <!-- <PostTop {title} {tags} {projects} />-->
+
 <PostContents>
+    <OpenInGithub url='${item.html_url}' />
     <PostSection>
 ${readme}
     </PostSection>
 </PostContents>
 `;
 
-            var projectFilePath = __dirname + `/../routes/Projects/${item.name}.svelte`;
+            var projectFilePath = __dirname + `/../routes/projects/${item.name}.svelte`;
             ensureDirectoryExistence(projectFilePath);
             fs.writeFileSync(projectFilePath, projectContent,{encoding:'utf8',flag:'w'});
 
@@ -88,17 +91,19 @@ ${readme}
         var projectTitles = projects.map(x=>
 `
 <PostLink title="${x.name}" slug="/projects/${x.name}" tags="${x.topics.filter(x => x != projectTag).join(',')}">
+<OpenInGithub url='${x.html_url}' />
 ${x.description}
 </PostLink>
 `);
 const indexFileContents = `
 <script>
     import PostLink from '$components/Post-Link.svelte';
+    import OpenInGithub from "$components/Open-In-Github.svelte";
 </script>
 
 ${projectTitles.join('')}
 `;
-        var indexFilePath = __dirname + "/../routes/Projects/index.svelte";
+        var indexFilePath = __dirname + "/../routes/projects/index.svelte";
         fs.writeFileSync(indexFilePath, indexFileContents,{encoding:'utf8',flag:'w'});
         console.log("Created", indexFilePath);
     }
