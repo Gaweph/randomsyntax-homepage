@@ -70,6 +70,7 @@
 
   pre > code[class*="language-"] {
       font-size: 0.8em;
+      font-size: 1.2em;      
   }
 
   h4 {
