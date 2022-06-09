@@ -22,31 +22,31 @@
       href="https://fonts.googleapis.com/css?family=Dosis:regular,bold&subset=Latin"
     />
     
-  <link rel="stylesheet" href="/content/blog/css/prism-vs.css" />
+    <link rel="stylesheet" href="/content/blog/css/prism-xonokai.css" />
 
     <link rel="stylesheet" href="/global.css" />
     <link rel="stylesheet" href="/color.css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
 	<title>Test Private Methods with C#</title>
 
-<link rel="modulepreload" href="/_app/test-private-methods.svelte-a9022f5c.js">
-			<link rel="modulepreload" href="/_app/start-26cfb01a.js">
+<link rel="modulepreload" href="/_app/test-private-methods.svelte-f5499353.js">
+			<link rel="modulepreload" href="/_app/start-dbcd2c23.js">
 			<link rel="modulepreload" href="/_app/inject_styles-0e3d93cc.js">
-			<link rel="modulepreload" href="/_app/Post-Top.svelte-f26ad7a2.js">
-			<link rel="modulepreload" href="/_app/Post-Tags-Projects.svelte-83cea1f0.js">
+			<link rel="modulepreload" href="/_app/Post-Top.svelte-bb375333.js">
+			<link rel="modulepreload" href="/_app/Post-Tags-Projects.svelte-c4292b3d.js">
 			<link rel="modulepreload" href="/_app/free-solid-svg-icons-7076105a.js">
-			<link rel="modulepreload" href="/_app/Post-Contents.svelte-5c5156dc.js">
-			<link rel="modulepreload" href="/_app/Post-Section.svelte-432e7a96.js">
-			<link rel="modulepreload" href="/_app/PrismJS.svelte-b13108bd.js">
+			<link rel="modulepreload" href="/_app/Post-Contents.svelte-4a139ae0.js">
+			<link rel="modulepreload" href="/_app/Post-Section.svelte-2f7a2ad5.js">
+			<link rel="modulepreload" href="/_app/PrismJS.svelte-cb10f448.js">
 			<link rel="stylesheet" href="/_app/start-7e46d347.css">
 			<link rel="stylesheet" href="/_app/Post-Tags-Projects.svelte-9d07b317.css">
 			<link rel="stylesheet" href="/_app/Post-Contents.svelte-5f07a47c.css">
 			<link rel="stylesheet" href="/_app/Post-Top.svelte-746a00dd.css">
-			<link rel="stylesheet" href="/_app/PrismJS.svelte-e8c5cae8.css">
+			<link rel="stylesheet" href="/_app/PrismJS.svelte-1a8056a6.css">
 
 
 		<script type="module">
-			import { start } from '/./_app/entry-55b81964.js';
+			import { start } from '/./_app/entry-b9ffe42c.js';
 			start({
 				target: document.querySelector("#svelte"),
 				host: location.host,
@@ -80,7 +80,7 @@ This extension will allow any object to invoke a private method <code class="lan
   <div>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">public static class TestHelpers
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">public static class TestHelpers
 {
     public static object RunPrivateMethod(this object obj, string methodName, params object[] args)
     {
@@ -101,7 +101,7 @@ Use it like this
 <div>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">var res1 = obj.RunPrivateMethod(&quot;SecretInternalMethod&quot;);
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">var res1 = obj.RunPrivateMethod(&quot;SecretInternalMethod&quot;);
 var res2 = obj.RunPrivateMethod(&quot;SecretInternalMethodWithArgs&quot;, arg1, arg2);</code></pre></div>
 
 <h2>Explanation</h2>
@@ -116,7 +116,7 @@ The following usage example shows how this could be used in a unit test
 <div>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">public class Person
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">public class Person
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }

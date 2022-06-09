@@ -22,37 +22,37 @@
       href="https://fonts.googleapis.com/css?family=Dosis:regular,bold&subset=Latin"
     />
     
-  <link rel="stylesheet" href="/content/blog/css/prism-vs.css" />
+    <link rel="stylesheet" href="/content/blog/css/prism-xonokai.css" />
 
     <link rel="stylesheet" href="/global.css" />
     <link rel="stylesheet" href="/color.css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
 	<title>Time Game 1 - Implementing Time Travel</title>
 
-<link rel="modulepreload" href="/_app/timegame-1-timetravel.svelte-6e9bcfea.js">
-			<link rel="modulepreload" href="/_app/start-26cfb01a.js">
+<link rel="modulepreload" href="/_app/timegame-1-timetravel.svelte-87d2d402.js">
+			<link rel="modulepreload" href="/_app/start-dbcd2c23.js">
 			<link rel="modulepreload" href="/_app/inject_styles-0e3d93cc.js">
-			<link rel="modulepreload" href="/_app/Post-Top.svelte-f26ad7a2.js">
-			<link rel="modulepreload" href="/_app/Post-Tags-Projects.svelte-83cea1f0.js">
+			<link rel="modulepreload" href="/_app/Post-Top.svelte-bb375333.js">
+			<link rel="modulepreload" href="/_app/Post-Tags-Projects.svelte-c4292b3d.js">
 			<link rel="modulepreload" href="/_app/free-solid-svg-icons-7076105a.js">
-			<link rel="modulepreload" href="/_app/Post-Contents.svelte-5c5156dc.js">
-			<link rel="modulepreload" href="/_app/PrismJS.svelte-b13108bd.js">
-			<link rel="modulepreload" href="/_app/Callout.svelte-541ddcb5.js">
-			<link rel="modulepreload" href="/_app/Vimeo.svelte-ff3e7256.js">
-			<link rel="modulepreload" href="/_app/Post-Section.svelte-432e7a96.js">
-			<link rel="modulepreload" href="/_app/Link-External.svelte-32731f15.js">
+			<link rel="modulepreload" href="/_app/Post-Contents.svelte-4a139ae0.js">
+			<link rel="modulepreload" href="/_app/PrismJS.svelte-cb10f448.js">
+			<link rel="modulepreload" href="/_app/Callout.svelte-7a658f31.js">
+			<link rel="modulepreload" href="/_app/Vimeo.svelte-33f61807.js">
+			<link rel="modulepreload" href="/_app/Post-Section.svelte-2f7a2ad5.js">
+			<link rel="modulepreload" href="/_app/Link-External.svelte-13d569b7.js">
 			<link rel="stylesheet" href="/_app/start-7e46d347.css">
 			<link rel="stylesheet" href="/_app/Post-Tags-Projects.svelte-9d07b317.css">
 			<link rel="stylesheet" href="/_app/Post-Contents.svelte-5f07a47c.css">
 			<link rel="stylesheet" href="/_app/Post-Top.svelte-746a00dd.css">
-			<link rel="stylesheet" href="/_app/PrismJS.svelte-e8c5cae8.css">
+			<link rel="stylesheet" href="/_app/PrismJS.svelte-1a8056a6.css">
 			<link rel="stylesheet" href="/_app/Callout.svelte-a9f481ba.css">
 			<link rel="stylesheet" href="/_app/Vimeo.svelte-8676971e.css">
 			<link rel="stylesheet" href="/_app/Link-External.svelte-23e4e1bf.css">
 
 
 		<script type="module">
-			import { start } from '/./_app/entry-55b81964.js';
+			import { start } from '/./_app/entry-b9ffe42c.js';
 			start({
 				target: document.querySelector("#svelte"),
 				host: location.host,
@@ -95,11 +95,11 @@ The first thing we need to do is to record our players movement. The easiest
     thing to do seems to be to record the players position and rotation
     (Transform). For this we create an object which will be used to hold the
     recorded information.
-    <div><h4 class="svelte-1frtdds"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+    <div><h4 class="svelte-1ul0dat"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
         RecordingData.cs</h4>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">
 public class RecordingData
 {    
     public float RecordedRate { get; set; }
@@ -141,11 +141,11 @@ public class RecordingData
     ?)
   </div>
   We then need to call a method which records the data.
-  <div><h4 class="svelte-1frtdds"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+  <div><h4 class="svelte-1ul0dat"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
         TakeSnapShot()</h4>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">private RecordingData recordingData = new RecordingData();
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">private RecordingData recordingData = new RecordingData();
 public void TakeSnapshot()
 {
     var t = Transform;
@@ -160,11 +160,11 @@ public void TakeSnapshot()
   coroutines to ensure a consistent sample of data. In the below example we are
   using **0.05 seconds** which is a rate of 20fps. This seems to offer a smooth
   enough playback rate (discussed later in this article).
-  <div><h4 class="svelte-1frtdds"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+  <div><h4 class="svelte-1ul0dat"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
         Record Coroutine</h4>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">
 public bool DoRecording = true;
 void StartRecording()
 {
@@ -190,11 +190,11 @@ IEnumerator RecordingTimer(float sampleRate)
   <h2>Replay</h2>
 Then we just need to play this data back. Again this is done with a
     coroutine.
-    <div><h4 class="svelte-1frtdds"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+    <div><h4 class="svelte-1ul0dat"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
         Playback Coroutine</h4>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">
 public bool DoPlayback = true;
 public void StartPlayback()
 {
@@ -203,11 +203,11 @@ public void StartPlayback()
     StartCoroutine(PlaybackTimer());
 }</code></pre></div>
     This is the same as the recording loop except it calls Next SnapShot().
-    <div><h4 class="svelte-1frtdds"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+    <div><h4 class="svelte-1ul0dat"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
         Playback Loop</h4>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">
 //PLAYBACK LOOP
 IEnumerator PlaybackTimer()
 {
@@ -220,11 +220,11 @@ IEnumerator PlaybackTimer()
     The
     <strong>NextSnapshot</strong>
     method simply retrieves the desired transform of the object.
-    <div><h4 class="svelte-1frtdds"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+    <div><h4 class="svelte-1ul0dat"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
         NextSnapshot()</h4>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">
 private RecordingData.RecordData? _desiredMoveLocation = null;
 
 //MOVE DESIRED LOCATION TO NEXT LOCATION
@@ -241,11 +241,11 @@ private void NextSnapshot()
     We then move the object each update frame using the
     <strong>Lerp</strong>
     function (this helps keep the movement smooth).
-    <div><h4 class="svelte-1frtdds"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+    <div><h4 class="svelte-1ul0dat"><svg aria-hidden="true" class="fa-svelte svelte-1yhv2ed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
         Move Object</h4>
 
   
-    <pre class="svelte-1frtdds"><code class="language-csharp svelte-1frtdds">
+    <pre class="svelte-1ul0dat"><code class="language-csharp svelte-1ul0dat">
 public void Update()
 {
     if (_desiredMoveLocation.HasValue)
