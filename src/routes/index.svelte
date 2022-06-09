@@ -53,7 +53,6 @@ import BlogArrow from "$components/Blog-Arrow.svelte";
 						href="projects"
 						>
 						<Icon class="large" icon={faRocket} />	
-
 						<ProjectsArrow ref="projects-arrow" />
 						<span class="screen-reader-only">Projects</span>
 					</a>		
@@ -64,10 +63,7 @@ import BlogArrow from "$components/Blog-Arrow.svelte";
 						href="blog"
 						>
 						<Icon class="large" icon={faGlobe} />		
-
-            
-						<BlogArrow ref="blog-arrow" />
-						
+						<BlogArrow ref="blog-arrow" />						
 						<span class="screen-reader-only">Blog</span>
 					</a>
 				</div>
