@@ -47,7 +47,7 @@ import BlogArrow from "$components/Blog-Arrow.svelte";
 					<Icon class="large" icon={faPinterest} />
 					<span class="screen-reader-only">gaweph on Pinterest</span>
 				</a>        
-				<!-- <div class="btn-projects icon-container">          
+				<div class="btn-projects icon-container">          
 					<a
 						preload="true"
 						href="projects"
@@ -56,7 +56,7 @@ import BlogArrow from "$components/Blog-Arrow.svelte";
 						<ProjectsArrow ref="projects-arrow" />
 						<span class="screen-reader-only">Projects</span>
 					</a>
-        </div>		 -->
+        </div>		
 				<div class="btn-blog icon-container">
 					<a
 						preload="true"
