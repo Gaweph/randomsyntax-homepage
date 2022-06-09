@@ -30,6 +30,7 @@ export const BuildProjects = async () => {
         const response = await axios.get(`https://api.github.com/users/${githubUserName}/repos`)
         const projects = response.data.filter(x => x.topics.indexOf(projectTag) != -1);
 
+        console.log("projects", projects);
         const converter = new showdown.Converter();
         
         for(var i = 0; i < projects.length; i++) 
@@ -81,7 +82,7 @@ ${readme}
             ensureDirectoryExistence(projectFilePath);
             fs.writeFileSync(projectFilePath, projectContent,{encoding:'utf8',flag:'w'});
 
-            // projects.push({id: item.id, name: item.name, readme: readme, tags: item.topics, description: item.description});
+            console.log("Created", projectFilePath);
         }
             
         var projectTitles = projects.map(x=>
