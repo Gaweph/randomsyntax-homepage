@@ -91,7 +91,6 @@ ${readme}
         var projectTitles = projects.map(x=>
 `
 <PostLink title="${x.name}" slug="/projects/${x.name}" tags="${x.topics.filter(x => x != projectTag).join(',')}">
-<OpenInGithub url='${x.html_url}' />
 ${x.description}
 </PostLink>
 `);
